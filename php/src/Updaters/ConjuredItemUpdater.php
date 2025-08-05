@@ -13,13 +13,15 @@ class ConjuredItemUpdater implements ItemUpdaterInterface
 
         $degrade = 2;
 
-        if ($item->sellIn < 0) {
+        if ($item->sellIn < 0) 
+        {
             $degrade *= 2;
         }
 
         $item->quality -= $degrade;
 
-        if ($item->quality < 0) {
+        if ($item->quality < 0) 
+        {
             $item->quality = 0;
         }
     }
